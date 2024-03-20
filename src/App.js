@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import SubmitSnippet from "./pages/SubmitSnippet";
+import SnippetList from "./pages/SnippetList";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Submit Snippet</Link>
+            </li>
+            <li>
+              <Link to="/snippets">Snippet List</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<SubmitSnippet />} />
+          <Route path="/snippets" element={<SnippetList />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
