@@ -17,7 +17,7 @@ const SubmitSnippet = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/snippets", formData);
+      await axios.post("https://tfw-backend.onrender.com/", formData);
       setFormData({
         username: "",
         language: "",

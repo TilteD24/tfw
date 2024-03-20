@@ -10,7 +10,7 @@ const SnippetList = () => {
   useEffect(() => {
     const fetchSnippets = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/snippets");
+        const response = await axios.get("https://tfw-backend.onrender.com/");
         setSnippets(response.data);
       } catch (err) {
         console.error(err);
