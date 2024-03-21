@@ -11,7 +11,7 @@ const SnippetList = () => {
     const fetchSnippets = async () => {
       try {
         const response = await axios.get(
-          "https://tfw-backend.onrender.com:10000/api/snippets"
+          "https://tfw-backend.onrender.com/api/snippets"
         );
         setSnippets(response.data);
       } catch (err) {

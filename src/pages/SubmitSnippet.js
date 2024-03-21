@@ -18,7 +18,7 @@ const SubmitSnippet = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://tfw-backend.onrender.com:10000/api/snippets",
+        "https://tfw-backend.onrender.com/api/snippets",
         formData
       );
       setFormData({
